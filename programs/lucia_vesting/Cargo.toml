@@ -1,0 +1,22 @@
+[package]
+name = "lucia_vesting"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "lucia_vesting"
+
+[features]
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+no-entrypoint = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { version = "0.30.0", features = ["init-if-needed"] }
+anchor-spl = "0.30.0"
+ahash = "0.8.8"
+chrono = "0.4.38"
